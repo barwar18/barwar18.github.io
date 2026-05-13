@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Words to display in the tab -->
+        <title>Bionic Hand</title>
+
+        <!-- Picture to display in the tab (replace # with a link to the image)-->
+        <link rel="shortcut icon" type="image/x-icon" href="media/wbarker_initials.png">
+
+        <!-- Metadata and imported styles -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    
+    <body>
+        <div class="navdiv"></div>
+        <div class = "container">
+            <!--<div class="alert alert-danger">
+                <h2>Page Under Construction</h2>
+            </div>-->
+            <div class = "row">
+                <div class = "col-12">
+                    <h1>Bionic Hand</h1>
+                    <p>I started this project as a part of my involvement in the WPI Bionics Club. There was a finger design challenge that I decided to continue during the summer.
+                        I also wanted to practice using Solidworks to help earn certifications later. 
+                    </p>                   
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>Design Goals</h2>
+                    <ul>
+                        <li>Speed: Open and close in less than one second</li>
+                        <li>Range of Motion: Full finger flex with opposable thumb</li>
+                        <li>Strength: Pinch-pickup of small items (ex. pencil) and grasp items up to ten pounds</li>
+                        <li>Constraints: All mechanics inside palm. Similar shape to natural hand.</li>
+                    </ul>
+                </div>
+                <div class="col-sm-6">
+                    <h2>Project Goals</h2>
+                    <p>Through this project, I wanted to learn the differences between Solidworks and Inventor during the design process, and I
+                        wanted to start dabbling in PCB design. Designing electronic systems is where I have the least robotics experience, and this 
+                        project will require some unique components, so I hope to learn the most from this portion. I particularly want to learn how
+                        to read raw sensor data without the help of premade libraries.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <h2>Finger Iterations</h2>
+                    <p>I started with going through several finger iterations to reach a point I was satisfied with based on my design goals.
+                        This is where I've spent a majority of my time on this project so far. I went through six distinct iterations with a few tweaks
+                        before starting the next iteration. Almost all components that make up the finger are designed exclusively for the advantages of 3D-printing.
+                    </p>
+                </div>
+            </div>
+            <div class="row blockCarousel" id="fingerItrCarouselRow">
+                <div class="col-12">
+                    <div id="carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                        <span class="d-flex align-items-center">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <span class="centeredCarouselItems">
+                            <div class="row d-flex align-items-center">
+                                <div class="col-lg-7">
+                                    <h3>Version 1</h3>
+                                    
+                                    <p> The first version of the finger was all about the dimensions of each pad and achieving the desired range of motion.
+                                        I started with putting the pivot points at the bottom of each pad, but this didn't give me the correct distance between
+                                        parts of the finger when closed. Instead, I shifted to the pivot point to the top of the pads. I also recognized that the
+                                        distal phalange only moves when the intermediate phalange does, so I added a tendon that utilizes the increasing distance
+                                        between the tops of the phalanges when closing to actuate that pad. This meant a tensioner went into the proximal phalange to ensure
+                                        the motion was correct. I chose a worm gear system as the actuation method to save power when not moving the finger.
+                                        The geartrain would spin a small spool that wound up some fishing line to close the finger.
+                                    </p>
+                                </div>
+                                <div class="col-lg-5 centered">
+                                    <img src="media/PersonalProjects/index1.jpg" alt="A picture of the first version of the index finger" />
+                                </div>
+                            </div>
+                            </span>
+                          </div>
+                          <div class="carousel-item">
+                            <span class="centeredCarouselItems">
+                            <div class = "row d-flex align-items-center">
+                                <div class="col-lg-7">
+                                    <h3>Version 2</h3>
+                                    <p> The second version of the finger aimed to make the finger more natural-looking and close quicker. Most of the shape
+                                        adjustments were simple increases to the edge filets that made the finger much less rectangular. The increase in speed
+                                        came from increasing the diameter of the spool slightly and switching to a cascading stringing method (where one string ran
+                                        to each of the intermediate and proximal phalanges). The stringing change halved the actuation time with a slight further
+                                        reduction from the spool diameter increase. Finally, I adjusted the finger-opening springs to have a little more force.
+                                    </p>
+                                </div>
+                                <div class="col-lg-5 centered">
+                                    <img src="media/PersonalProjects/index2.jpg" alt="A picture of the second version of the index finger" />
+                                </div>
+                            </div>
+                            </span>
+                          </div>
+                          <div class="carousel-item">
+                            <span class="centeredCarouselItems">
+                            <div class = "row centeredCarouselItems d-flex align-items-center">
+                                <div class="col-lg-7">
+                                    <h3>Version 3</h3>
+                                    <p> The third version of the finger further sped up the finger actuation by decreasing the length of the string that needed
+                                        to be spooled up and increasing the torque needed to keep the finger closed. This version of the finger also removed the small metal pins that were used in the tensioners in favor
+                                        of printed parts with tabs. In this version, I introduced a TPU insert on the distal phalange to give the finger more 
+                                        grip on most surfaces. This enabled the finger to slide objects around with just fingertip contact.
+                                    </p>
+                                </div>
+                                <div class="col-lg-5 centered">
+                                    <img src="media/PersonalProjects/index3.jpg" alt="A picture of the third version of the index finger" />
+                                </div>
+                            </div>
+                            </span>
+                          </div>
+                          <div class="carousel-item">
+                            <span class="centeredCarouselItems">
+                            <div class = "row d-flex align-items-center">
+                                <div class="col-lg-6">
+                                    <h3>Version 4</h3>
+                                    <p>The previous switch to a cascading stringing method introduced more backlash because the fishing
+                                        line could stretch. To solve this issue, I switched to using 50lb-test from 8lb-test to reduce the stretching.
+                                        I made minor tweaks to the tensioners to help hold them in place. The spool got a little larger by moving the motor off-center,
+                                        which enabled the spool to get farther offset from the worm. The housing design shifted to properly support the spool.
+                                    </p>
+                                </div>
+                                <div class="col-lg-6 centered">
+                                    <img src="media/PersonalProjects/index4.JPG" alt="A rendering of the fourth version of the index finger" />
+                                </div>
+                            </div>
+                            </span>
+                          </div>
+                          <div class="carousel-item">
+                            <span class="centeredCarouselItems">
+                            <div class = "row d-flex align-items-center">
+                                <div class="col-lg-6">
+                                    <h3>Version 5</h3>
+                                    <p> Version five saw more tweaks to the tensioners, changes to the internal routing of the fishing line, and added
+                                        material to cover the springs from the bottom at each joint. The change in fishing line routing minimized the tight
+                                        curves in the line, which reduced the torque the motor needed to produce. I also switched to a more powerful motor with
+                                        a higher RPM.
+                                    </p>
+                                </div>
+                                <div class="col-lg-6 centered">
+                                    <img src="media/PersonalProjects/index5.JPG" alt="A rendering of the fifth versino of the index finger" />
+                                </div>
+                            </div>
+                            </span>
+                          </div>
+                          <div class="carousel-item">
+                            <span class="centeredCarouselItems">
+                            <div class = "row d-flex align-items-center">
+                                <div class="col-lg-6">
+                                    <h3>Version 6</h3>
+                                    <p> Version six is largely the same as version five except for the motor. I switched to a micro-servo because the worm gear
+                                        system was flawed. The parts were plastic, so they kept melting at the RPM needed to meet the speed goal. I tested a micro-servo that I already
+                                        had and it solved the issues I was seeing with the previous method. It was easy enough to replace the motor with the servo
+                                        in the full hand design, so I went with it.
+                                    </p>
+                                </div>
+                                <div class="col-lg-6 centered">
+                                    <img src="media/PersonalProjects/index6.JPG" alt="A rendering of the sixth version of the index finger" />
+                                </div>
+                            </div>
+                            </span>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev chevron" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                          <span aria-hidden="true"><svg class="carouselChevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="maroon" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next chevron" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                          <span aria-hidden="true"><svg class="carouselChevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="maroon" d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <h2>Final Product</h2>
+                    <p>After going through all the finger iterations, I developed the thumb through two iterations before finally designing the base of the hand.
+                        This is the final design:
+                    </p>
+                </div>
+            </div>
+            
+            
+            <div class="row centered">
+                <div class="col-12">
+                    <img src="media/PersonalProjects/finalHand.jpg" alt="A collection of four images. The first two are renders of the hand in an open and closed position.
+                    The third is a picture of a physical hand without the top cover, exposing the servos. The fourth is a look inside the
+                    proximal phalange showing the internal routes for fishing line." id="finalHandMedia">
+                    <div class="iContainer">
+                        <iframe src="https://www.youtube.com/embed/3S7QL_Ib-BU?si=kZA-g1VD20slNR_Q&mute=1" 
+                        title="YouTube video player" frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row centered" id="handPhotosRow">
+                <div class="col-4">
+                    <img src="media/PersonalProjects/holdingBin1.jpg" alt="The hand is holding a light bin with closed fingers." />
+                </div>
+                <div class="col-4">
+                    <img src="media/PersonalProjects/holdingPen.jpg" alt="The hand is holding a pen with the middle finger, index finger, and thumb." />
+                </div>
+                <div class="col-4">
+                    <img src="media/PersonalProjects/holdingBin2.jpg" alt="The hand is holding a light bin with open fingers." />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <h2>Design Review</h2>
+                    <p>Overall, I'm happy with the design. It gives me a strong base to work on my electronics skills and functions well. However, I'd like it to be
+                        stronger. It can pinch small, useful objects and grasp objects up to five pounds (max tested so far), which doesn't quite meet my design objective. 
+                        The servos work well from a position-control perspective, but they lack the ability to produce enough force when closing. The fingers
+                        can complete one open and close cycle in about 0.8 seconds, the hand looks rather natural (the thumb positioning is the oddest part), and it
+                        has the desired range of motion. The servos don't always close as far as they should, this could be from the library code implementing an
+                        anti-stall feature that triggers whenever there's too much resistance against the servo's motion.
+                        It could also be a lack of current output from the batteries. Additionally, the interior geometry forces it to be 3D-printed, which works well, but the joints are weak.
+                        During stress tests, the finger currently snaps at the first joint on the base side. With all this in mind, there is additional work I'd like
+                        to do.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <h2>Future Work</h2>
+                    <p>In the future, I plan to develop an electronics system with myoelectric sensors to make control much simpler. The goal would be to have
+                        this all contained inside the palm as well (minus the sensors). The current hand design is a bit weak, so once the electronics are complete,
+                        I may develop a left hand with a different
+                        actuation method. This hand would likely be slower but stronger because it would use linkages and a linear actuator. This would allow me to
+                        practice developing linkages, experiment with sensors inside the finger pads as there wouldn't be strings running through them, and try
+                        to actuate the proximal and intermediate phalanges individually to improve grip strength.
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer"></div>
+        </div>
+    </body>
+    <script src="javascriptFunctions.js"></script>
+    <script>createNavMenu("bionicHand_Project.html", "projectsDrop");</script>
+</html>

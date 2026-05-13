@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Electronics Projects</title>
+
+        <!-- Picture to display in the tab (replace # with a link to the image)-->
+        <link rel="shortcut icon" type="image/x-icon" href="media/wbarker_initials.png">
+
+        <!-- Metadata and imported styles -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    
+    <body>
+        <div class="navdiv"></div>
+
+        <div class = "container">
+            <h1>Electronics</h1>
+            <p>Beyond the electronics in my other projects, there are a couple that are more in the electrical and computer engineering realm.</p>
+
+            <div class = "row d-flex align-items-center">
+                <div class = "col-md-12">
+                    <h3 class="centered">Boiler Stack Thermometer</h3>
+                    <p>
+                        A maintenance team member at Imagine keeps bees and makes honey. One step in this process uses a boiler to render
+                        honeycomb into honey. He asked me to build a thermometer that will notify him when the temperature gets too low
+                        so more wood can be added to the boiler. I developed a system on a breadboard then converted it to a protoboard and
+                        put it into an enclosure. Due to the temperature the boiler stack can reach, the system is built around an arbitrary
+                        Type-K thermocouple. The thermocouple signal is converted to SPI then processed by an ESP32. There is a 4-part, 7-segment
+                        LED display, 3 different color LEDs, and a buzzer. The buzzer also has a connector to branch off to an external relay
+                        (I chose to add this in case a buzzer isn't loud enough).
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 centered">
+                    <figure>
+                        <img src="media/PersonalProjects/thermCoverOff.jpg" alt="Photo of electronics with the cover off" />
+                    </figure>
+                    <figcaption>Soldered board inside the enclosure</figcaption>
+                </div>
+                <div class="col-md-3 centered">
+                    <figure>
+                        <img src="media/PersonalProjects/thermGood.jpg" alt="Photo of assembled system heated to good temperature (green light on)">
+                    </figure>
+                    <figcaption>System state when temperature is good</figcaption>
+                </div>
+                <div class="col-md-3 centered">
+                    <figure>
+                        <img src="media/PersonalProjects/thermBad.jpg" alt="Photo of assembled system that is too cool (red light on)">
+                    </figure>
+                    <figcaption>System state when temperature is too low</figcaption>
+                </div>
+                <div class="col-md-3 centered">
+                    <figure>
+                        <img src="media/PersonalProjects/thermSet.jpg" alt="Photo during setting of alarm temperature (all lights on)">
+                    </figure>
+                    <figcaption>Setting the alarm temperature</figcaption>
+                </div>
+            </div>
+            <div class = "row d-flex align-items-center">
+                <div class = "col-md-5">
+                    <h3 class="centered">ESP32 Wave Generator</h3>
+                    <p>
+                        As part of my application to Rho Beta Epsilon, I programmed a simple wave generator using ESP32 timers.
+                        A potentiometer controls the frequency and a button switches between waveforms. The system works by manipulating an internal
+                        timer and outputting a counter value through a DAC pin.
+                    </p>
+                </div>
+                <div class="col-md-7 centered">
+                    <figure class="centered">
+                        <div class="iContainer">
+                            <iframe src="https://www.youtube.com/embed/aeHmRdS3tQc?si=DSMPn18kt6E1ct8F" title="YouTube video player" 
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <figcaption>(Demo video showing system functionality)
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="footer"></div>
+        </div>
+    </body>
+    <script src="javascriptFunctions.js"></script>
+    <script>createNavMenu("electronics_Projects.html", "projectsDrop");</script>
+</html>

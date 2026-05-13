@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Programming Projects</title>
+
+        <!-- Picture to display in the tab (replace # with a link to the image)-->
+        <link rel="shortcut icon" type="image/x-icon" href="media/wbarker_initials.png">
+
+        <!-- Metadata and imported styles -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <script src="javascriptFunctions.js"></script>
+    </head>
+    
+    <body>
+        <div class="navdiv"></div>
+
+        <div class="container-fluid">
+            <div class="row centered sectionJumping sticky-top d-flex align-items-center justify-content-center notSmallShow" id="sectionJumper">
+                <div class="col-2">
+                    <h4>Jump to Section</h4>
+                </div>
+                <div class="col-2">
+                    <button onclick="scrollToTargetAdjusted('pythonProjects')">Python</button>
+                </div>
+                <div class="col-2">
+                    <button onclick="scrollToTargetAdjusted('arduinoProjects')">Arduino</button>
+                </div>
+                <div class="col-3">
+                    <button onclick="scrollToTargetAdjusted('webProjects')">HTML, CSS, and JS</button>
+                </div>
+                <div class="col-3">
+                    <button onclick="scrollToTargetAdjusted('localizationProject')">Localization Algorithm</button>
+                </div>
+            </div>
+            <hr>
+
+        <div class="container">
+            <h1>Programming Projects</h1>
+            <p>My programming projects have a wide variety of purposes. Most of my programming experience comes from FIRST Robotics seasons, but I 
+                also work on personal projects that I find interesting or useful. I have experience with web languages from HTML to a light amount of SQL, and
+                I've worked with Java, JS, Python, and Arduino.
+            </p>
+            
+            <span id = "pythonProjects">
+                <div class = "row">
+                    <div class = "col-12">
+                        <h3 class = "centered">Python</h3>
+                        <p>I learned the basics of Python during my senior year of High School. I took the course as a quarter-long elective to fill out my schedule, but now
+                            I can use Python to simplify the programming for some projects, as desired. I use these projects as a way to learn some of the more complex
+                            aspects of Python.
+                        </p>
+                        <br>
+
+                        <h4>Math Program</h4>
+                        <p>My first attempt at a Python project was creating a platform similar to MATLAB (although the final
+                            product will be much simpler) as a way to use outside modules and work on developing a math program because Python is one of the few languages that can't do much math by default.
+                            I wanted to work with matplotlib as a part of a project, but I likely won't use it for anything outside of a personal project, so I decided to start messing with it during
+                            this project. The plan is for a user to input a line (2D or 3D) function and the program can draw it, much like more complex calculators.
+                            I got to the point of testing complex equations before pausing that project in favor of working on a second project. 
+                        </p>
+                        <br>
+                        
+                        <h4>Notetaking Program</h4>
+                        <p>I'm now focused on a notetaking program that can store any notes I take from online or print sources.
+                            This would be for individually paced learning rather than lectures, so it's a bit of a longer process. There will be space to make diagrams and add captions for them. There will also 
+                            be a written note area with a typing section and drawing section (for handwriting) to help better remember some of the information. I have 
+                            application pages set up, so now I need to work out the tricky part, which is the search algorithm (i.e. the whole
+                            reason I'm making a program rather than just writing everything on paper). I am currently working on how to locally store the information
+                            in a way that will be readable when reopening the program. I've worked out a basic system for this, but I need to integrate a sorting method before going much further.
+                        </p>
+                    </div>
+                </div>
+            </span>
+
+            <span id = "arduinoProjects">
+                <div class = "row">
+                    <div class = "col-12">
+                        <h3 class = "centered">Arduino Programming</h3>
+                        <p>I recently started learning Arduino programming. I know how useful Arduino can be for custom projects, especially if you can make custom shields, so the 
+                            Arduino programming language is something I'm slowly learning. Other than going through basic tutorials, I've used Arduino for basic control of my bionic hand
+                            through basic pushbuttons. I added a little complexity to this project by adding a seven-segment display that tracks the finger's speed.
+                            After switching to servos, I integrated an IR remote to control the positions and a potentiometer to fine tune any movements.
+                            I plan to develop an Arduino controlled Autonomous robot that can avoid obstacles and move around in its environment with a robot arm to collect/move things,
+                            which will all be developed from scratch in my next few projects. This may also enable me to delve into creating shields to expand my electrical engineering background.
+                        </p>
+                    </div>
+                </div>
+            </span>
+
+            <span id = "webProjects">
+                <div class = "row">
+                    <div class = "col-12">
+                        <h3 class = "centered">HTML, CSS, and JS</h3>
+                        <p>I learned HTML, CSS, and JavaScript at various times during high school. I developed a small website for my FTC team and rebuilt the website for 
+                            my FRC team through Wordpress, but I only used code to avoid using plugins (the reason why we needed to rebuild the website).
+                            I tend to use a bootstrap framework behind all my pages to streamline the design and make them responsive. I'm still learning
+                            how to integrate JS into my webpages to make them more dynamic, but the elements included with bootstrap often remove the need for much JS.
+                            I've also dabbled in PHP and SQL, but those are more related to a <a href = "frontiers_Project.html">Frontiers Project</a>.
+                        </p>
+                    </div>
+                </div>
+            </span>
+
+            <span id = "localizationProject">
+                <div class = "row centered">
+                    <div class = "col-12">
+                        <h3>Localization Algorithm (Java)</h3>
+                        <p>This project started out of necessity for my FTC team's 2021-22 season robot. 
+                            I developed the entire system and programming, but couldn't quite get the system to work properly due to time constraints. 
+                            I plan to continue working on this algorithm in conjunction with other, personal, robotics projects in the future.
+                        </p>
+                    </div>
+                </div>
+                <div class = "row blockCarousel">
+                    <div class="col-12">
+                        <div id="carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+                            
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <span class="centeredCarouselItems">
+                                    <div class="row d-flex align-items-center">
+                                        <div class = "col-lg-6">
+                                            <h4>The Problem</h4>
+                                            <p>On the 2021-22 FTC season field, there were a set of small pipes that robots could either navigate around or over. To go around, robots would need
+                                                to be at least two inches smaller than the maximum size limits. Our team elected to go over the bars, which means we would need a different
+                                                method than the normal FTC localization method. Most robots with dedicated localization systems use dead-wheel odometry, where a set of
+                                                un-powered wheels are tracked with dedicated encoders. However, because we were going over the bars, our odometry would have a high
+                                                amount of error as soon as the dead-wheels leave the ground. So, we decided to use a new system that wouldn't rely on contact with the ground.
+                                            </p>
+                                        </div>
+                                        <div class = "col-lg-6 centered">
+                                            <img src = "media/FIRST/ftc21-22Field.png" alt = "The terrain on the field that required a robot or localization method alteration." />
+                                        </div>
+                                    </div>
+                                </span>
+                              </div>
+                              <div class="carousel-item">
+                                <span class="centeredCarouselItems">
+                                    <div class = "row d-flex align-items-center">
+                                        <div class="col-lg-6">
+                                            <h4>The Solution</h4>
+                                            <p>We developed a system that uses a series of seven REV distance sensors to detect the field walls. The four sensors on the corners
+                                                of the robot were mounted on servos that would rotate them to face forward and backward. This gave us three sensing points on three
+                                                of the four sides on our robot. By using several sensors on one side, we would be able to both align the robot to the field as desired
+                                                and find our position based on two of the four field walls (because the sensors can't see the full distance of the field). 
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-6 centered">
+                                            <img src="media/FIRST/localizationRbt.png" alt="A rendering of our robot with the drivetrain and sensors only" />
+                                        </div>
+                                    </div>
+                                </span>
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev chevron" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                                <span aria-hidden="true"><svg class="carouselChevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="maroon" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next chevron" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                                <span aria-hidden="true"><svg class="carouselChevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="maroon" d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class = "row mt-3">
+                    <div class="col-12">
+                        <h4>The Code</h4>
+                    </div>
+                </div>
+                <div class = "row">
+                    <div class="col-md-4 p-2">
+                        <h5><strong>General Function</strong></h5>
+                        <p>
+                            The system works by turning the servos and taking samples of the distances from each sensor (two sides at a time) in half-second intervals.
+                            The data from the sensors is used to determine the robot's current position on the field, which is based off a coordinate system with the
+                            origin in a specific corner. Each of the four starting positions has a preferred set of measurements to use, if they exist, to minimize interference
+                            from game elements or other robots. Other autonomous instructions are implemented through Java methods that move the robot in straight lines and 
+                            rotate it, as needed.
+                        </p>
+                    </div>
+                    <div class="col-md-4 p-2">
+                        <h5><strong>Discrepancy Handling</strong></h5>
+                        <p>
+                            The biggest challenge with this system is dealing with sensor measurements that don't match (within a margin of error). As the robot moves
+                            a PID loop corrects any drifting to either side, but when a sensor picks up another robot or a field element, the program needs to deal
+                            with a larger discrepancy. The algorithm determines whether the discrepancy is large enough that there's something in the way and 
+                            tracks how long it has been in the way to determine whether it is a robot or field element (i.e. is it stationary or not). If it is stationary
+                            the robot avoids it, but other robots will be waited out for a brief period.
+                        </p>
+                    </div>
+                    <div class="col-md-4 p-2">
+                        <h5><strong>Issues</strong></h5>
+                        <p>
+                            The current position recognition system works well if there are no other elements in the field, but that's never the case.
+                            In matches, the algorithm would get confused when determining what things to avoid and delay the autonomous too long.
+                            The sensors on servos would occasionaly take a reading too early or late, so it was measured while not on a specific side,
+                            which caused discrepancy handling to fail.
+                        </p>
+                    </div>
+                </div>
+                <div class="row centeredCarouselItems">
+                    <div class="col-12">
+                        <h4>The Future</h4>
+                        <p>
+                            In the future, I plan to make the robot move through strafing when possible (if I continue to use mecanum wheels) to speed up
+                            the movement. Obviously, I also need to work on the discrepancy handling system, which really just needs more debugging time.
+                            Overall, I want to complete this project to help improve my understanding of how robots can operate in changing environments.
+                            I plan to integrate this programming with a personal robot that can navigate around an area and accomplish certain tasks.
+                        </p>
+                    </div>
+                </div>
+            </span>
+        </div>
+        <div class="footer"></div>
+    </div>
+    </body>
+    <script src="javascriptFunctions.js"></script>
+    <script>createNavMenu("programming_Project.html", "projectsDrop");</script>
+</html>
+            

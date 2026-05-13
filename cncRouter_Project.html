@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Words to display in the tab -->
+        <title>CNC Router Project</title>
+
+        <!-- Picture to display in the tab (replace # with a link to the image)-->
+        <link rel="shortcut icon" type="image/x-icon" href="media/wbarker_initials.png">
+
+        <!-- Metadata and imported styles -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <script src="javascriptFunctions.js"></script>
+    </head>
+    
+    <body>
+        <div class="navdiv"></div>
+
+        <div class="container-fluid">
+            <div class="row sectionJumping sticky-top d-flex align-items-center centered notSmallShow" id="sectionJumper">
+                <div class="col-3 centered">
+                    <h4>Jump to Section:</h4>
+                </div>
+                <div class="col-2">
+                    <button onclick="scrollToTargetAdjusted('orgDesign')">Design</button>
+                </div>
+                <div class="col-2">
+                    <button onclick="scrollToTargetAdjusted('orgTesting')">Testing</button>
+                </div>
+                <div class="col-2">
+                    <button onclick="scrollToTargetAdjusted('redesign')">Redesign</button>
+                </div>
+                <div class="col-3">
+                    <button class="m-3" onclick="scrollToTargetAdjusted('fnlProduct')">Final Product</button>
+                </div>
+            </div>
+            <hr>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="centered">CNC Router</h2>
+                    <p>I started this project to reduce downtimes when my high school was closed, meaning my robotics teams couldn't use the CNC mill in our workshop.
+                        The goal was to have an 18x18x1" working area with the ability to cut sheet metal (mainly aluminum).
+                    </p>
+                </div>
+            </div>
+            <span id="orgDesign">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="red">Original Design</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>The original design is based heavily on a machine made by <a href="https://www.youtube.com/channel/UCF3cDM_hQMtIEJvEW1BZugg">Ivan Miranda</a> and posted on YouTube.
+                            Design work was done in Autodesk Inventor over a summer break from high school. Originally, the plan was to try making
+                            a compact system that could be put on a cart and moved to another location. However, during the design process,
+                            the machine got larger to suit the desired work area and the deadspace that resulted from the overall design. Geared Nema-23 stepper motors
+                            attached to belts drove the X and Y Axes while a standard Nema-23 connected to a lead screw drove the Z-Axis. The spindle
+                            was a Makita router with speeds from ~10,000RPM to ~30,000RPM.
+                            The control system was an Arduino Uno running GRBL with a CNC shield running the stepper motors.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="iContainer">
+                            <iframe src="https://www.youtube.com/embed/dn021SDgpsU?si=TVjC94Eg-5uP9g4o&mute=1" title="YouTube video player" 
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p>(Design work was done before I knew how to use parameters and cross-file dimensioning.)</p>
+                    </div>
+                </div>
+            </span>
+                <div class="row">
+                    <div class="col-lg-8 tabled">
+                        <div class="container-fluid col-center">
+                            <div class="row tabledTopRow">
+                                <div class="col-6 centered firstItem">
+                                    <img src="media/PersonalProjects/CNC Fab2.jpg" alt="A photo of the fabrication process where I am lining up the linear rails on two metal beams."
+                                        class="edgedImg">
+                                </div>
+                                <div class="col-6 centered secondItem">
+                                    <img src="media/PersonalProjects/CNC Fab3.JPG" alt="A photo of the mounted X-axis gantry."
+                                        class="edgedImg">
+                                </div>                              
+                            </div>
+                            <div class="row tabledBotRow">                               
+                                <div class="col-6 centered firstItem">
+                                    <img src="media/PersonalProjects/CNC Fab4.jpg" alt="A photo of the machine near the end of fabrication."
+                                        class="edgedImg">
+                                </div>
+                                <div class="col-6 centered secondItem">
+                                    <img src="media/PersonalProjects/CNC Fab.JPG" alt="A photo during electronics work. I was extending
+                                        the wires to reach the electronics box." class="edgedImg">
+                                </div>                              
+                            </div>
+                        </div>
+                        <p>Top Left: Aligning linear rails for the Y-Axis. Top Right: X-Axis gantry installed with Z-Axis lead screw in place. Bottom Left: CNC towards
+                            the end of fabrication. Bottom Right: Mechanically complete CNC with electronics in progress.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 mt-2">
+                        <h4><strong>Fabrication</strong></h4>
+                        <p>Fabrication occurred over winter break of 2020. The sets of linear rails were aligned using precision measurements
+                            from a digital calipers before match drilling most of the holes in each rail. 3D-printed parts were all printed in PLA
+                            on a Creality Ender 3. The frame of the machine is aluminum while all hardware is steel. Wiring terminated in screw
+                            terminals or DuPont connectors. Some 3D-printed parts involving electronics needed to be altered using an old soldering iron.
+                            To allow for cables to extend out from the Arduino. The trickiest part of the assembly process was connecting the
+                            printed parts to the carriage blocks without the carriage blocks running off their tracks. Otherwise, fabrication
+                            went rather smoothly.
+                        </p>
+                        
+                    </div>
+                </div>
+            <hr class="minorBreak">
+            <span id="orgTesting">
+                <div class="row">
+                    <div class="col-12">
+                        <h4 class="centered"><strong>Testing</strong></h4>
+                        <p>During testing, many things went wrong. The most important being the inability to cut aluminum at a decent rate and tolerance.
+                            The rigidity of the machine and power of the Makita router combined to make cutting metal difficult. The bit would walk 
+                            wherever stress was less and the spindle didn't have a DRO, so determining the exact RPM of the cutter was inconvenient.
+                            Other problems were less impactful but still worth remedying in the redesign. These included hexagonal indents for large
+                            bolts creating cracks, weak 3D-printed parts (with long replacement prints), and a lack of a machine position (no endstops).
+                        </p>
+                    </div>
+                </div>
+                <div class="row centered">
+                    <div class="col-12">
+                        <div id="cncCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#cncCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#cncCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#cncCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                              <button type="button" data-bs-target="#cncCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                              <button type="button" data-bs-target="#cncCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                              <button type="button" data-bs-target="#cncCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                              <button type="button" data-bs-target="#cncCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            </div>
+
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="media/PersonalProjects/CNC Testing6.jpg" class="d-block cncTesting" alt="Setting up the CNC for testing">
+                                <div class="carousel-caption d-none d-md-block">
+                                  <p>Setting up the CNC router programming through Universal Gcode Sender</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="media/PersonalProjects/CNC Testing7.jpg" class="d-block cncTesting" alt="The CNC router working on a part made out of plywood.">
+                                <div class="carousel-caption d-none d-block">
+                                  <p>Watching and collecting dust while cutting plywood</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="media/PersonalProjects/CNC Testing1.JPG" class="d-block cncTesting" alt="A closer view of the CNC router working on a part made out of plywood.">
+                                <div class="carousel-caption d-none d-block">
+                                  <p>A closer view of the CNC actively cutting wood</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="media/PersonalProjects/CNC Testing2.JPG" class="d-block cncTesting" alt="The completed plywood part,
+                                but it has an issue because the collet wasn't tightened.">
+                                <div class="carousel-caption d-none d-block">
+                                  <p>The end product. The collet wasn't fully tightened so the part had to be aborted.</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="media/PersonalProjects/CNC Testing3.JPG" class="d-block cncTesting" alt="The CNC router's attempt at cutting a 1.25 inch circle into aluminum.">
+                                <div class="carousel-caption d-none d-block">
+                                  <p>An attempt at cutting aluminum</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="media/PersonalProjects/CNC Testing4.JPG" class="d-block cncTesting" alt="A broken plastic part that was holding the router.">
+                                <div class="carousel-caption d-none d-block">
+                                  <p>A broken plastic part due to a loose clamp allowing the spindle to lower too far</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="media/PersonalProjects/CNC Testing5.png" class="d-block cncTesting" alt="The misalignment in the machine after testing. It was about one inch.">
+                                <div class="carousel-caption d-none d-block">
+                                  <p>The misalignment between the two Y-Axis rails after testing</p>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- Carousel controls -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#cncCarousel" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#cncCarousel" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+                    </div>
+                </div>
+            </span>
+            <hr class="minorBreak">
+            <span id="redesign">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="red">Redesign</h3>
+                        <p>The main purpose of the redesign is to enable the machine to cut aluminum. This required improving the machine's ability
+                            to hold its position when cutting aluminum. Along the way, the other minor issues will also be remedied.
+                        </p>
+                    </div>
+                </div>
+                    
+                
+                <div class="row">
+                    <div class="col-md-5">
+                        <h4><strong>Lead Screws</strong></h4>
+                        <p>I determined the walking bit was a result of the belt drive system forcing the motor to need to hold its position,
+                            which stepper motors can't do. Thus, I decided to convert the machine to a lead screw actuation method. This resulted
+                            in drastic modification of many 3D-printed parts to make printing easier while reducing the number of extra parts needed
+                            for the modifications. Each lead screw would be attached to the motor with a flexible adapter and held up on the opposite
+                            side by a bearing pressed into a printed housing.
+                        </p>
+                    </div>
+                    <div class="col-md-3">
+                        <h4><strong>Endstops</strong></h4>
+                        <p>While the machine could be used without endstops, I wanted to add them to prevent damage, especially with printed parts in use.
+                            I settled on using plunger switches for the X and Y axes and a lever switch for the Z axis. These would be added to one
+                            side of each axis and a soft limit would stop motion on the opposite side.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h4><strong>Spindle Swap</strong></h4>
+                        <p>To add some precision to the CAM operations and to simplify the design of some printed parts, I decided to swap to
+                            a VFD driven spindle. The VFD means I can see what RPM the spindle is running at, so I know how fast I should set
+                            the feedrate. However, I'm not connecting the VFD to the controller, so there's an extra step during operation.
+                        </p>
+                    </div>
+                </div>
+                <div class="row" id="redesignMediaRow">
+                    <div class="col-md-7">
+                        <img src="media/PersonalProjects/CNC V2.png" alt="The full design of the CNC after redesigning." />
+                    </div>
+                    <div class="col-md-5">
+                        <img src="media/PersonalProjects/Spindle Render.png" alt="A picture of the new gantry runner. It no longer has an easily breakable
+                        portions, which also simplifies printing." />
+                    </div>
+                </div>
+            </span>
+            <hr class="minorBreak">
+            <span id="fnlProduct">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="red">Final Product</h3>
+                        <p>After finishing the planned modifications, I needed to add collars to compress the couplers between the motors
+                            and lead screws to remove the easy walking the machine could do because the couplers were flexible. When integrating
+                            the endstops I discovered that there was too much electromagnetic interference, which caused false triggers of the alarm. This was
+                            temporarily solved using a low-pass RC filter on a breadboard for each endstop. In the future, I plan to machine aluminum
+                            parts to replace the plastic and redesign the controller box to fit the endstop filters.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <p><strong>Work Area:</strong> 16.5 x 16.3 x 3.1"</p>
+                        <p><strong>Step Resolution:</strong> 56,562 x 56,562 x 7,124 Steps/in</p>
+                        <p><strong>Spindle RPM:</strong> ~5,000 - ~24,000</p>
+                        <p><strong>Materials Cut:</strong> Wood, Foam, and Aluminum</p>
+                    </div>
+                    <div class="col-sm-8 centered">
+                        <img src="media/PersonalProjects/CNC Completed.jpeg" alt="A photo of the completed CNC after the redesign." />
+                    </div>
+                </div>
+            </span>
+            <hr class="minorBreak">
+            <span id="output">
+                <div class="row d-flex align-items-center">
+                    <div class="col-sm-6">
+                        <h3 class="red">Sample Work</h3>
+                        <p>One thing I created with my CNC is a simple wooden F1 car. I modeled the car based on top and side profiles
+                            of an F1 car to get the shape correct. I then created the CAM profiles in Autodesk Inventor (only using a square
+                            endmill because that's all I had). The CNC router cut the part very accurately, and I was able to clean up the part with
+                            a few cuts to remove areas the router couldn't reach.
+                        </p>
+                    </div>
+                    <div class="col-sm-4 centered">
+                        <img src="media/PersonalProjects/F1Car.jpg" alt="A photo of the completed wooden F1 car." />
+                    </div>
+                    <div class="col-sm-2 centered">
+                        <img src="media/PersonalProjects/F1Car_Top.jpg" alt="A top-down photo of the completed wooden F1 car." />
+                    </div>
+                </div>
+                
+            </span>
+        </div>
+        <div class="footer"></div>
+    </div>
+    </body>
+    <script src="javascriptFunctions.js"></script>
+    <script>createNavMenu("cncRouter_Project.html", "projectsDrop");</script>
+</html>

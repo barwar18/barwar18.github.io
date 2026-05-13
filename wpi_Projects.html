@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>WPI UG Projects</title>
+
+        <!-- Picture to display in the tab (replace # with a link to the image)-->
+        <link rel="shortcut icon" type="image/x-icon" href="media/wbarker_initials.png">
+
+        <!-- Metadata and imported styles -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    
+    <body>
+        <div class="navdiv"></div>
+
+        <div class = "container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>WPI Undergraduate Projects</h1>
+                    <p>I chose to attend WPI because of its focus on project-based learning. During my time at WPI,
+                        I've worked on several projects related to my classes that are described below, listed by date completed.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+            <div class="container-fluid" id = "dcIQP">
+                <div class = "bkgImgFull">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h2>Major Qualifying Project | PRIMO - Mobile Construction 3D-Printer</h2>
+                            <p>The <a href="https://www.wpi.edu/project-based-learning/project-based-education/major-qualifying-project">
+                                Major Qualifying Project</a> (MQP) is part of WPI's graduation requirements. This project is major specific and students select
+                                which project they'd like to complete. My project involved creating the initial prototype of a mobile robot for construction 3D-printing.
+                                Advised by Professor Mahdi Agheli, we participated in the SICK $10k Challenge (where we earned second place) and the MassRobotics Form and Function Challenge.
+                                The week after school ended, a teammate and I displayed our robot at Automate 2025 as part of a WPI cohort. Part of the project is developing a report summarizing everything, which gets published
+                                in WPI's database (<a href="https://digital.wpi.edu/concern/student_works/vt150q07k?locale=en">our project report</a>, currently under embargo).
+                                We are also
+                                working to write a journal paper for ASME JMR and previously filed for a provisional patent on the concept as we evaluate
+                                our options to complete a standard patent in the future.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row" id="dc-exp-row">
+                        <div class="col-sm-6">
+                            <h3>The Process</h3>
+                            <img src="media/WPI_UG/fabricating_baseboard.jpg" alt="A photo taken during fabrication of the final baseboard with cement tests in the photo as well">
+                            <p>Over the course of Senior year, my three teammates, a grad student, and I worked to bring this robot to life. In A-term, we created a
+                                simple gantry system as a testbed for nozzle development. We ended up bringing this system to the Manufacturing Mashup
+                                in October along with other WPI projects. From there, we continued testing different types of pumps and nozzles on increasingly
+                                viscous materials. Eventually, we settled on a screw pump design because it allowed for continuous filling of the material reservoirs
+                                while producing enough force to extrude wet cement. During the same time, we worked on testing a simple chassis. After validating
+                                motor choices, I made a completely wooden prototype over winter break that we used to ensure strength before trading out some parts
+                                for 3D-prints to improve tolerances and minimize the robot's form factor.
+                            </p>
+                        </div>
+                        <div class="col-sm-6">
+                            <h3>The Result</h3>
+                            <img src="media/WPI_UG/PRIMO_Cropped.png" alt="A cropped image of our robot in real life">
+                            <p>
+                                In the end, the robot achieved the goals we set at the beginning of the year. It can print straight layers of any length 
+                                and drive atop previously printed layers to build a wall of any height. ESPNow provides wireless communication without needing a
+                                WiFi connection. Onboard the robot, this ESP32 communicates with a Raspberry Pi and Arduino Mega to control the whole robot. The entire project budget was $1000, which we were able to stretch by using available components from the robotics labs
+                                and various competitions, namely the SICK $10k Challenge where we were provided a Multiscan100 LiDAR to use in our project.
+                                I was primarily responsible for the drivetrain and turntable mechanism as well as the programming, apart
+                                from the LiDAR data processing. The immediate next steps for the project will answer questions about material resupply and improve
+                                autonomy.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row centered">
+                        <div class="col-sm-12">
+                            <iframe width="800" height="450" src="https://www.youtube.com/embed/hVTwsLFAPoI?si=CvTsvPaHwzRMvW1X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <p>A short demo video I created for WPI's Undergraduate Research Project Showcase.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class = "container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>RBE 4815 Lab Development</h2>
+                    <p>In D-term of my Senior year, I was fortunate enough to lead the development of new labs for RBE4815: Industrial
+                        Robotics. When I took the course in B-term, we completed labs using an ABB IRB1600 serial manipulator, which was replaced with a
+                        UR5e. With this switch, new lab documents and lab tasks were required to suit a different robot setup. Along with
+                        grading for the class, I worked on developing and writing these new lab assignments. They mimic the prior labs, but
+                        incorporate more tasks pertinent to a cobot with additional attention to efficiency.
+                        Below is a demo of one of these modified labs.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <figure class="centered">
+                        <div class="iContainer75">
+                            <iframe src="https://www.youtube.com/embed/HBt_2GnttqY?si=10VSKo0PDygfSn8s&mute=1" title="YouTube video player" 
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <figcaption>Demo video for the UR5e version of the palletizing lab using a parallel gripper from Robotiq
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>SMA Coiling Machine</h2>
+                    <p>In RBE530, we learned about many different aspects of soft robotics and its applications in research and industry.
+                        Final projects in this class typically involve experimenting with small soft robotic elements. I wanted to
+                        work with Shape Memory Alloy (SMA) to develop a gripper actuated by the technology. Unfortunately, the lab did not
+                        have the capability to make SMA coils consistently, so, instead, I built such a coiling machine.
+                    </p>
+                    <p>I designed, built, and programmed the SMA Wire Coiling Machine with less than three weeks left in the year. It uses
+                        two NEMA-17 stepper motors to rotate a wrapping spindle as a carriage moves along a lead screw. The two motors allow
+                        for varying wire diameters and coil pitch. The system is controlled by commerically available components: Arduino Mega,
+                        RAMPS 1.4 Shield, and LCD Smart Controller. The LCD menu items allow for easy manipulability and control of the machine.
+                        The wrapping rod is made of stainless steel with shaft collars to secure both ends of a coil. The entire rod is mounted
+                        between drill chucks to allow for varying sizes of wrapping rod and easy rod removal. Because the rod can be removed easily,
+                        the machine does not need to handle the high temperatures required to train SMA into the coil shape. I used an Ender-3
+                        extruder assembly without a motor pinion to create increased tension as the wire is pulled to improve pitch consistency.
+                    </p>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col-sm-6">
+                    <img src="media/WPI_UG/Coiler_CAD.PNG" alt="A CAD model of the SMA coiler">
+                </div>
+                <div class="col-sm-6">
+                    <img src="media/WPI_UG/Coiler_Machine.JPG" alt="The physically assembled SMA coiler">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <figure class="centered">
+                        <div class="iContainer75">
+                            <iframe src="https://www.youtube.com/embed/y7vMUZQ29d0?si=_DzOz1UsgkusVFao&mute=1" title="YouTube video player" 
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <figcaption>Two coiling demos with varying coil pitch
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <img src="media/WPI_UG/Finished_Coil.JPG" alt="A coil after removal from the wrapping rod">
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>RBE 3002</h2>
+                    <p>As the final course in the base robotics series, RBE 3002 covers probability-related tasks. This course involved learning the theory behind Simultaneous Localization
+                        And Mapping (SLAM), different types of localization algorithms, path-planning calculations, and introduced us to the Robot Operating System (ROS). Labs in this course used simulations in Gazebo
+                        Turtlebot3-Burger robots, so we could focus on learning the programming and probability material. Pathfinding covered several different methods, but we primarily focused on A*. In our final lab,
+                        our A* algorithm calculated the cost to each node with consideration of the node's proximity to walls, which helped keep the robot centered between walls. We employed a point representation of
+                        the robot and modified the C-Space to suit the physical dimensions of the robot.
+                    </p>
+                    <p>The final lab in this course consisted of three phases: mapping (with SLAM), returning to the start position, and solving the "Kidnapping Problem." I was most involved with the
+                        SLAM and return to the start portion. In this portion, we had to navigate a maze while mapping it and then return to the starting position once it was determined that the map
+                        was complete (all autonomously). I worked on tuning the Gmapping parameters to create a usable map while also creating the control algorithms that kept the robot from hitting walls. I employed a combination
+                        of pure-pursuit to follow the computed path (computed using A*) with an artificial potential field (APF) to keep the robot away from the walls. The APF made inconsistencies in
+                        the map less problematic while mapping. When the robot got stuck due to conflicting pure-pursuit and APF, the path was recalculated to resolve the issue. During the mapping phase,
+                        frontiers are identified using an algorithm created by a teammate. Once the algorithm identifies them, the robot moves to a reachable point nearest the most interesting frontier to map that area.
+                        Once no frontiers remain, the robot returns to the starting/home position.
+                    </p>
+                    <figure class="centered">
+                        <div class="iContainer75">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/JVpNgVzO5zM?si=tFRhu1MUndcIUEC-&mute=1" title="YouTube video player" 
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <figcaption>(The upper right shows the RViz window run on the computer that performs path calculations based on the current map. The map for Phase 3 was created during a different run.)
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>RBE 3001 and RBE 4815</h2>
+                    <p>RBE 3001 and RBE 4815 courses focus on the fundamentals of industrial robotics. In 3001, we learned how to perform forward and inverse kinematics for a serial
+                        manipulator and programmed a hobby-grade robotic arm throughout the term. The final project in this course also introduced some computer vision concepts related
+                        to object identification and color sorting. In 4815, we went deeper into the mathematics behind industrial robots, including numerical FK and IK for serial and parallel
+                        manipulators. In lecture, we learned the underlying concepts behind controlling industrial robots, while labs focused more on getting experience with industrial robot software.
+                        We used ABB software and an IRB1600 arm in these labs to learn how robot arms can be controlled in an industrial setting through offline and online programming. While we didn't
+                        program PLCs ourselves, we did interface with one for the palletizing challenge to determine whether blocks were present in the shoe.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <p>The labs and final project in RBE 3001 produced an image processing pipeline and control code that will move the arm to collect colored balls from the camera view
+                        to predetermined sorting locations outside the view. Everything was programmed in MATLAB to simplify matrix operations with frame transformations. We also added a
+                        mode to track the ball as it's moved around the viewing area without picking it up.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <p>RBE 4815 had several labs throughout the term that led up to a simple palletizing challenge. The goal was to create an easily configurable program that would
+                        allow quick changes to the stack dimensions. I implemented the requirements through a series of nested FOR loops with counters that determine the stack dimensions.
+                        Due to issues with the light gates, we ran the robot rather slowly to reduce safety concerns.
+                    </p>
+                    <figure class="centered">
+                        <div class="iContainer75">
+                            <iframe src="https://www.youtube.com/embed/WND_GFp-8XE?si=CQIbExcLc_y7ELlo&mute=1" title="YouTube video player" 
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <figcaption>(Awkward placement as height increases was caused by compounding of high Z-position offset.)
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>RBE 2002</h2>
+                    <p>RBE 2002 is the second course in the Robotics Engineering-specific curriculum. Prior courses focus on mechanical aspects of robotics, while this
+                        course delves into sensing and perception. The material covers many topics, including hysteresis, complementary filters, forward kinematics, and vision.
+                        During labs throughout the term, we worked in teams of four to practice using material taught in lecture. By the end of the term, we each developed
+                        a robot that incorporates some parts of the material.
+                    </p>
+                    <p>My robot uses material beyond the lectures to map the field and pathfind around it. We intended to use MQTT to send information between robots,
+                        but shortly before the demos, the network hosting MQTT went down for a while, so we were forced to test out robots individually. The challenge was to have robots
+                        working together to find the exit door and its code by interacting with certain field elements. My robot allowed our team to conquer any maze
+                        configuration by mapping where everything is and computing paths between different cells. In the demo below, my robot drives around the field to map it.
+                        The robot's operational logic is run on an Atmega32, while the mapping and pathfinding are run on a separate ESP32. The ESP32 also handles
+                        MQTT, so storing the map on the ESP32 simplifies sending data to other robots. Once the robot completes the map, it waits for instructions.
+                        In the video, I emulate the instructions other robots would create (door code, door location, and when to leave) via manual MQTT messages.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <h4>Mapping</h4>
+                    <p>
+                        The robot maps the field using a left-hand-on-wall approach (switching to the right if it moves too many spaces without mapping the whole field).
+                        When it reaches an intersection, it sends and awaits an ultrasonic pulse in three directions to determine whether there is a wall. The robot only
+                        moves on if it receives a reading, which means the ramp can cause delays when a lot of pings get reflected in a direction where the robot doesn't
+                        recieve them.
+                        This data is formatted into two bytes of information and sent to the ESP32 via UART communication. When the robot reaches a space it has already mapped,
+                        it continues without rescanning that cell, turning left or right if needed.
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <h4>Pathfinding</h4>
+                    <p>The pathfinding is a breadth-first search system because, given the field layout, more complex algorithms would not have produced many better results.
+                        The calculations are non-blocking (a big emphasis for the course), and the iteration comes through the main loop and counter variables. Once a path is
+                        found, an additional calculation finds the cell the robot should travel to that is in the same column or row as the robot. This approach simplifies
+                        sending instructions because the other robots don't need to know when to turn. Instead, they reach the waypoint and ask for directions again until
+                        reaching the place they want to go.
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <h4>Exiting</h4>
+                    <p>
+                        Once at the exit door, the robot sends rangefinder pulses and flashes the door code via an IR emitter (mounted on a pole to increase transmission
+                        consistency). The exit door opens when the code is correct. As soon as the robot's rangefinder detects the door is open, it enters standoff control, where
+                        the motors are powered to put the robot 2cm from a wall. In the video, the timer controlling when to update motor speeds for this part was not enabled,
+                        causing a robotic faceplant.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <figure class="centered">
+                        <div class="iContainer75">
+                            <iframe src="https://www.youtube.com/embed/MnjDwl3uQWQ?si=BwKeTYtqfHAOBYin&mute=1" title="YouTube video player" 
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <figcaption>(The box in the upper right shows the MQTT messages the robot is sending.)
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-12">
+                    <h2>CS 3733</h2>
+                    <p>At WPI, CS3733-Software Engineering is a notoriously time-consuming course. In the course, lectures cover material from UML and use case diagrams
+                        to a brief introduction to database architecture. Throughout the course, we learn the skills needed to consider ourselves Full-Stack developers.
+                        The class project revolves around creating a professional website for Brigham and Women's Hospital in Boston, MA. 
+                        We worked with frontend and backend
+                        languages to create an interactive site that uses a database to store any desirable information. I worked in a team of eleven people where we employed
+                        the agile methodology, and I acted as the scrum master. I primarily specialized in frontend work but took on some backend work and managed the AWS server
+                        to which we deployed our program every week. I also created the rough hospital model seen on the homepage using SolidWorks.
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-12">
+                    <h2>Bird Deterrent Robot</h2>
+                    <p>During A and C terms, I helped Professor Lewin convert a prior year's MQP into a more complete product for the project sponsor. Previous years created the
+                        general idea and purpose for the robot. I then converted their mostly 3D-printed design into a mostly metal design. At the time, I didn't have
+                        the necessary experience to tackle the programming aspects, so I focused on the mechanical conversion. The project aims to create a robot that can
+                        autonomously detect birds on a section of a power line and scare them away without touching them. You can read all about the prior designs
+                        <a href="https://digital.wpi.edu/concern/student_works/mg74qq33c?locale=en">here (2022)</a> and
+                        <a href="https://digital.wpi.edu/concern/student_works/3n204243h?locale=en">here (2023)</a>.
+                        I designed all the parts during A-term, someone else fabricated most during B-term, and I assembled the robot during C-term.
+                        My work made the robot more consistent in handling the slope of power lines and more resilient to the outdoor environment.
+                        I also developed a robust latch system based on a car trunk latch that is simple to open but won't open if you aren't trying to open it.
+                        At this point, I am no longer heavily involved in the project as most of the remaining work is programming or electrical in nature, which other
+                        students have taken charge of.
+                    </p>
+                </div>
+            </div>            
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="media/WPI_UG/BOAW Closed.JPG" alt="CAD rendering of the robot in its closed state">
+                </div>
+                <div class="col-md-6">
+                    <img src="media/WPI_UG/BOAW Open.JPG" alt="CAD rendering of the robot in its opened state">
+                </div>
+            </div>
+            <div class="row centered pt-3">
+                <div class="col-12">
+                    <div class="iContainer75">
+                        <iframe src="https://www.youtube.com/embed/VgQB_dQwDRU?si=tlxnpbbQWB117tvv&mute=1" title="YouTube video player" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="container-fluid" id = "dcIQP">
+            <div class = "bkgImgFull">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2>Interactive Qualifying Project</h2>
+                        <p>The <a href="https://www.wpi.edu/project-based-learning/project-based-education/interactive-qualifying-project">
+                            Interactive Qualifying Project</a> (IQP) is part of WPI's graduation requirements. Students often leave campus for 
+                            a seven-week term to complete this project. I spent my time in Washington, DC, near the end of 2023, working on a project sponsored by
+                            Atlas Public Policy. IQPs focus on combining our technical skills with social issues. I worked in a team of four
+                            on developing a residential heating system tracker intended to help understand how many new homes use heat pumps,
+                            tracking the number over time. Part of the project is developing a report summarizing everything, which gets published
+                            in WPI's database (<a href="https://digital.wpi.edu/concern/student_works/kk91fq71c?locale=en">our project report</a>).
+                        </p>
+                    </div>
+                </div>
+                <div class="row" id="dc-exp-row">
+                    <div class="col-sm-6">
+                        <h3>The Result</h3>
+                        <img src="media/WPI_UG/newHousingPoints.png" alt="A screenshot of the end result of our tool showing all the new houses around 
+                        DC and their heating appliance type">
+                        <p>My team and I spent 35 hours working on the project each week. Ultimately, we created a system to collect and visualize
+                            housing and U.S. Census Bureau data for any U.S. metropolitan statistical area. The back-end of the program collects 
+                            all the data when a user selects a U.S. metropolitan statistical area on the front-end (a simple GUI made with Tkinter).
+                            Once complete, the program creates a series of CSV files that a separate script, run in QGIS (an open-source geographic 
+                            information systems program), formats into a visual representation of the data. Our work was intended as a low-cost 
+                            prototype of the system for Atlas Public Policy to evaluate and continue developing.
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <h3>Other Experiences</h3>
+                        <img src="media/WPI_UG/UScapitol.jpg" alt="A picture of the US Capitol from the East that I took after our tour.">
+                        <p>Outside the work week, I visited many Smithsonian Institution museums. My favorite was the Steven F. Udvar-Hazy
+                            Air and Space Museum because of the Orbiter on display. With the rest of my DC cohort, I toured the capital with an
+                            added quick visit to the Rules Committee room thanks to Rep. Jim McGovern (the Worcester area representative), 
+                            with whom we had a lengthy Q&A before the tour. I also immensely enjoyed walking around the National Mall and basin,
+                            stopping at all the memorials when the weather was warmer.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class = "container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>RBE 2001</h2>
+                    <p>RBE 2001 was my first robotics course at WPI. The curriculum and term-long project focused on mechanical
+                        design principles and simple programming concepts. I worked with three other students to develop two robots
+                        to complete a challenge created by the professor. The challenge simulated replacing solar panels on a slanted shed roof.
+                        I developed the design for one robot along with the gearbox
+                        for the second. The robot I designed (called "Cheese-bot") could lift the heaviest specified panel.
+                         I also programmed and tuned the robot I designed to be as quick as possible. The biggest
+                        challenge in this project was contending with inconsistencies in the sensor readings and alleviating their causes
+                        as much as possible. In the end, we earned a great score. If I had more time to work on the programming, I would've implemented
+                        derivative control to dampen the rapid acceleration to increase consistency while still moving quickly.
+                    </p>
+                    <figure class="centered">
+                        <div class="iContainer75">
+                            <iframe src="https://www.youtube.com/embed/2uGTX39nI4M?si=m-Oo_L3osA41TInX&mute=1" title="YouTube video player" 
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <figcaption>I developed and tuned the second robot shown in the video. The red collars on the first robot are the TPU parts I
+                            developed. The green spacers removed backlash that previously caused inconsistency.
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="row d-flex align-items-center">
+                <div class="col-md-6">
+                    <p>I created models for the robot in Solidworks. The parts we designed are mostly 3D-printed with some laser-cut acrylic
+                        components. When constructing the second robot, the lab ran out of collars, so I also developed TPU collars that perfectly fit around the axle to prevent any slipping. For a bonus-point assignment, I used Solidworks tools to
+                        create an assembly video (shown below, the fast pace is due to needing to fit it into a short final presentation). The video is for an 
+                        earlier version of the robot.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="iContainerSpecial">
+                        <iframe src="https://www.youtube.com/embed/d2wSIVQP8PE?si=Fvy3HD3Ny441PNyt&mute=1" title="YouTube video player" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <hr>
+                    <h1>Frontiers</h1>
+                    <p>Frontiers is a program run by WPI for pre-college students. Normally it is in person, but the two years I participated were virtual due to COVID-19 (summers of 2020 and 2021).
+                        My first year, I took a college CAD course for credit, which is where I first learned the basics of Solidworks. My second year I spent four weeks getting
+                        an introduction to computer science and robotics engineering curriculum at WPI. Each path had a large project to complete throughout the term.
+                    </p>
+                </div>
+            </div>
+            <div class = "row">
+                <div class="col-12">
+                <h3 class="centered">Line-Following Robot</h3>
+
+                    <p>For the robotics engineering portion of my Frontiers experience, The challenge was to make as many "grocery" deliveries as possible, to three different
+                        platforms, in six minutes. The robots were shipped to us, so it was mostly a programming challenge. I could have adjusted how much weight the
+                        robot could move at a time if I adjusted the pivot point on the arm, but the backlash was too high to reach the highest point if I had it
+                        anywhere else. For the first two runs of the challenge, the robot would look for the load (a Dixie cup full of spare nuts) somewhere in an empty
+                        corner of the board. After that, the load was collected from the end of the line. I used a distance sensor to detect where the cup was when it needed
+                        to be found, and I always used the sensor to determine when to turn the robot around to collect the load. From there, the robot would make its
+                        way back to the starting location before proceeding to the specified drop location (chosen through an IR remote at the start of each run). 
+                        After delivering the load, the robot moved back to the start location for another run. If an
+                        obstacle were placed in a known location, the robot would avoid it by taking the longer route to its next destination, otherwise, it travels on the
+                        shortest path. While not as tough of a challenge as my <a href="programming_Project.html#localizationProject">Localization Algorithm</a>, 
+                        the process of tuning the driving PID loop and fine tuning everything
+                        to make the robot as fast as possible was very helpful for my next robotics seasons. 
+                    </p>
+                </div>
+                <div class="col-sm-12 centered">
+                    <figure>
+                        <div class="iContainer75">
+                            <iframe src="https://www.youtube.com/embed/18qWxX8bJk4?si=AnqgTqzz2e5ZL1t8&mute=1" title="YouTube video player" 
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <figcaption>x3 speed video of my robot completing the challenge</figcaption>
+                    </figure>
+
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "col-12">
+                    <h3>The Snake Game: <a href = "https://github.com/barwar18/Snake-Game-Website" target="_blank">Github Page</a></h3>
+                    <p>As a final project in my Frontiers CS experience, I worked with two other people to produce this code. We were the most experienced group, so we were
+                        tasked with using HTML, CSS, JS, PHP, and SQL to develop a website containing whatever we wanted. 
+                        We made a website that ran a standard Snake Game and tracked local results. HTML and CSS created the page structure while JS ran the game.
+                        Additionally, PHP and SQL recorded scores. I handled the HTML and CSS along with some JS and PHP that combined the game and webpage. Since I already
+                        had experience with HTML and CSS, I decided to make things a bit more difficult and learn a bit of PHP. I added a sign-in protocol that forced
+                        users to have a saved name before playing the game. I learned a lot about how to prevent people from accessing a webpage if they aren't signed-in
+                        as well as how to force them back to a sign-in page. To properly run the page, you'd need a local SQL Server to save names and scores.
+                    </p>
+                </div>
+
+                <div class="footer"></div>
+            </div>
+        </body>
+        <script src="javascriptFunctions.js"></script>
+        <script>createNavMenu("wpi_Projects.html");</script>
+</html
